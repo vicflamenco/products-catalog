@@ -1,15 +1,14 @@
-const express = require('express');
-const path = require('path');
-const serveStatic = require('serve-static');
-
-app = express();
-app.use(serveStatic(__dirname + "/dist"));
-
 const port = process.env.PORT || 5000;
 
-app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname + '/index.html'));
-})
+const express = require('express');
+const serveStatic = require('serve-static');
+const path = require('path');
 
-app.listen(port);
-console.log('server started '+ port);
+const app = express();
+
+app
+    .use("/", serveStatic (path.join(__dirname, '/dist')))
+    .get('*', function (req, res) {
+        res.sendFile(__dirname + '/dist/index.html')
+    })
+    .listen(port);
