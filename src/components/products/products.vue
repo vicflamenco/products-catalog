@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>PRODUCTS</h1>
+    <h1>Products</h1>
     <search placeholder="Search products" @search="searchTerm = $event" />
     <table class="table table-bordered">
       <thead>
@@ -10,15 +10,20 @@
           <th>Inventory</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody v-if="pageProducts.length">
         <tr v-for="product in pageProducts" :key="product.id">
           <td>{{product.title}}</td>
           <td>{{product.price}}</td>
           <td>{{product.inventory}}</td>
         </tr>
       </tbody>
+      <tbody v-else>
+        <tr><td colspan="3">No records found</td></tr>
+      </tbody>
     </table>
-    <b-pagination align="right" size="md" :total-rows="totalRows" :per-page="pageSize" v-model="pageNumber">
+    <b-pagination align="right" size="md"
+      :total-rows="totalRows" :per-page="pageSize" 
+      v-model="pageNumber">
     </b-pagination>
   </div>
 </template>
