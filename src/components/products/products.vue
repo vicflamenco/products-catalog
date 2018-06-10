@@ -1,7 +1,8 @@
 <template>
   <div>
     <h1>Products</h1>
-    <search placeholder="Search products" @search="searchTerm = $event" />
+    <search placeholder="Search products"
+      @search="searchTerm = $event" />
     <table class="table table-bordered">
       <thead>
         <tr>
