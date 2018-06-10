@@ -3,8 +3,7 @@
       <input type="text" class="form-control"
         :placeholder="placeholder"
         v-model="searchTerm"
-        @keyup="$emit('search', searchTerm)"
-      >
+        @keyup="$emit('search', searchTerm)">
       <div class="input-group-append">
         <button class="btn btn-outline-secondary" 
           type="button" 
@@ -17,13 +16,9 @@
 <script>
   export default {
     name: 'search',
-    props: {
-      placeholder: String
-    },
+    props: { placeholder: String },
     data: function(){
-      return {
-        searchTerm: ''
-      }
+      return { searchTerm: '' }
     }
   }
 </script>
