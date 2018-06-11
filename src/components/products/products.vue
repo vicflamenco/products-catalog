@@ -14,7 +14,7 @@
       <tbody v-if="pageProducts.length">
         <tr v-for="product in pageProducts" :key="product.id">
           <td>{{product.title}}</td>
-          <td>{{product.price}}</td>
+          <td>{{product.price | currency('€')}}</td>
           <td>{{product.inventory}}</td>
         </tr>
       </tbody>
