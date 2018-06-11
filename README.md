@@ -1,6 +1,7 @@
 # vue-training
 
-> A Vue.js project
+> A Vue.js project for Web Engineering Seminar at Tecnische Universität Chemnitz
+> Check the production app -> https://products-catalog-vue.herokuapp.com/
 
 ## Build Setup
 
