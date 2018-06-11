@@ -1,4 +1,4 @@
-# vue-training
+# Products Catalog SPA using Vue.js
 
 > A Vue.js project for Web Engineering Seminar at Tecnische Universität Chemnitz
 
