@@ -69,6 +69,9 @@
 </script>
 
 <style scoped>
+  h1 {
+    margin-bottom: 20px;
+  }
   div {
     padding-top: 0px;
     margin-top: 0px;

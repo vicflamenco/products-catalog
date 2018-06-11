@@ -18,5 +18,6 @@
   div {
     margin-top: 25px;
     padding-top: 25px;
+    margin-bottom: 30px;
   }
 </style>
